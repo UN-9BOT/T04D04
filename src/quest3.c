@@ -1,15 +1,15 @@
 #include <stdio.h>
 
-int fib(int);
+long int fib(long int);
 int main(void) {
-    int n;
+    long int n;
     char x;
 
-    (scanf("%i%c", &n, &x) == 2 && (x == '\n') && (n > 0)) ? printf("%i", fib(n)) : printf("n/a");
+    (scanf("%li%c", &n, &x) == 2 && (x == '\n') && (n > 0)) ? printf("%li", fib(n)) : printf("n/a");
     return (0);
 }
 
-int fib(int n) {
+long int fib(long int n) {
     if (n < 2) { return(n); }
     return (fib(n - 1) + fib(n - 2));
 }
