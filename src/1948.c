@@ -9,8 +9,9 @@ int main(void) {
     int n;
     char x;
 
-    ((scanf("%i%c", &n, &x) == 2 && (x == '\n'))) ? printf("%i", max_e_prime((n >= 1) ? n : -n))
-                                                  : printf("n/a");
+    ((scanf("%i%c", &n, &x) == 2 && (x == '\n') && (n != 1 && n != 0)))
+        ? printf("%i", max_e_prime((n >= 1) ? n : -n))
+        : printf("n/a");
     return (0);
 }
 
